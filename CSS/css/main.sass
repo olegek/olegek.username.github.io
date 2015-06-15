@@ -1,21 +1,44 @@
 @import "lib/bourbon/bourbon"
 @import "lib/neat/neat"
 @import "base/base"
-
+@import "mediaQueries/mediaQ"
 
 body
 	margin: 0
+
+.desctopMenu
+	display: block
+
+.mobileMenu
+	display: none
+
+.logoDisplay
+	display: none
+
+.whiteColor
+	color: white
+
+.designDropBox
+	float: right
+	margin: 2px
+	font-size: 17px
+	padding-bottom: 3px
+	margin-top: 45px
+	text-transform: uppercase
+	font-weight: 600
+	margin-right: 4px
+	margin-left: 4px
 
 .setBackground
 	background-image: url(../images/bg3.jpg)
 	background-size: cover
 	background-repeat: no-repeat
-	height: 100vh
+	height: 101vh
 	@include clearfix
 
 
 .setOpacityForBackground
-	height: 101vh 	 
+	height: 100vh 	 
 	background-color: rgba(44, 80, 218, 0.25)
 
 
@@ -35,7 +58,6 @@ nav
 	z-index: 99
 	-webkit-backface-visibility: hidden
 	height: 95px
-
 
 .toCenter
 	float: right
@@ -92,25 +114,28 @@ nav
 	@include span-columns(3)
 	@include omega(4n)
 	margin-right: 0px
-	margin-top: 5%
+	margin-top: 3%
 
 .heroIcon
 	img
 		width: 48px
 		height: 51px
 
+.heroIcons
+	width: 100%
+
 .getStartedButton
 	padding: 1em 4em
-	margin-top: 65px
+	margin-top: 55px
 	margin-right: 30px
 
 .smart
-	margin-top: 100px
+	margin-top: 90px
 	margin-right: 10px
 
 .workSection
 	@include outer-container
-	margin-top: 5%
+	margin-top: 2%
 	margin-bottom: 7%
 	img
 		float: right
@@ -171,6 +196,9 @@ nav
 	margin-top: 20px
 	font-size: 13px
 
+.centered
+	display: inline
+
 .wrapp
 	@include outer-container
 	@include span-columns(10)
@@ -216,4 +244,233 @@ nav
 	margin-right: 4px
 	margin-left: 4px
 	margin-bottom: 15px
+
+
+
+.dropdown
+	$base-border-color: gainsboro !default
+	$base-border-radius: 3px !default
+	$base-line-height: 1.5em !default
+	$base-background-color: rgba(44, 80, 218, 0.25) !default
+	$dark-gray: #333333 !default
+	$large-screen: em(860) !default
+	$base-font-color: white
+	$dropdown-color: white
+	$dropdown-description-color: lighten(white, 40%)
+	$dropdown-border: 1px solid silver
+	$dropdown-background: rgba(49, 106, 190, 1)
+	$dropdown-background-hover: darken(rgba(242, 242, 153, 0.2), 3%)
+	$dropdown-inner-border: 1px solid silver
+	$dropdown-height: 40px
+	$dropdown-padding: 1em
+	$dropdown-distance-from-menu: 50px
+	$dropdown-arrow-top-distance: 0
+	line-height: $base-line-height
+	.dropdown-container
+		display: inline-block
+		position: relative
+		text-align: center
+	.dropdown-description
+		background: $dropdown-background
+		border-bottom-left-radius: $base-border-radius
+		border-bottom: $dropdown-border
+		border-left: $dropdown-border
+		border-top-left-radius: $base-border-radius
+		border-top: $dropdown-border
+		color: $dropdown-description-color
+		float: left
+		font-size: 0.7em
+		line-height: $dropdown-height
+		margin: 0
+		padding: 0 $dropdown-padding / 2 0 $dropdown-padding
+		+media($large-screen)
+		font-size: 1em
+	.dropdown-button
+		background: $dropdown-background
+		color: rgba(22, 111, 241, 1)
+		border-bottom-right-radius: $base-border-radius
+		border-top-right-radius: $base-border-radius
+		border-top: $dropdown-border
+		border-right: $dropdown-border
+		border-bottom: $dropdown-border
+		cursor: pointer
+		float: right
+		font-size: 0.7em
+		font-weight: 800
+		line-height: $dropdown-height
+		margin: 0
+		padding: 0 $dropdown-padding * 2.5 0 $dropdown-padding / 2
+		position: relative
+		+media($large-screen)
+			font-size: 1em
+			padding: 0 $dropdown-padding * 2.5 0 $dropdown-padding / 2
+	.dropdown-button:hover
+		background-color: $dropdown-background-hover
+	.dropdown-button:after
+		color: $base-font-color
+		content: "\25BE"
+		display: block
+		position: absolute
+		right: $dropdown-padding
+		top: $dropdown-arrow-top-distance
+	.dropdown-menu
+		+transition(all 0.2s ease-in-out)
+		background: $dropdown-background
+		border-radius: $base-border-radius
+		border: $dropdown-border
+		box-shadow: 0 2px 2px transparentize(black, 0.8)
+		color: $dropdown-color
+		cursor: pointer
+		display: none
+		margin: 0
+		overflow: show
+		padding: 0
+		position: absolute
+		right: 0
+		top: $dropdown-distance-from-menu
+		width: 228px
+		z-index: 99999
+		&:before
+			+position(absolute, 0 1em 0 0)
+			color: $dropdown-background
+			content: "\25b2"
+			font-size: 1.4em
+			pointer-events: none
+			text-shadow: 0 -2px 2px transparentize(black, 0.7)
+			top: -0.7em
+	.dropdown-menu li
+		border-bottom: $dropdown-inner-border
+		color: $dropdown-color
+		list-style: none
+		padding: $dropdown-padding / 2
+	.dropdown-menu li:hover
+		background: $dropdown-background-hover
+	.dropdown-menu li:first-child
+		border-top-left-radius: $base-border-radius
+		border-top-right-radius: $base-border-radius
+	.dropdown-menu li:last-child
+		border: none
+		border-bottom-left-radius: $base-border-radius
+		border-bottom-right-radius: $base-border-radius
+	.show-menu
+		display: block
+
+//////////// close
+
+@media screen and (max-width: 1172px)
+	.heroText
+		font-size: 50px
+		margin-top: 25px
+
+	.studyText
+		margin-top: 20px
+		font-size: 1.2em
+	.appInform
+		font-size: 2.6em
+	.aboutText
+		font-size: 14px
+	.quotesText
+		font-size: 14px
+	.user
+		font-size: 14px
+	.learnMore
+		font-size: 14px
+	.quotes
+		display: none
+
+	.copyright
+		font-size: 14px
+	.navFother
+		font-size: 14px
+
+
+@media screen and (max-width: 980px)
+	.navBar
+		font-size: 13px
+
+	.heroText
+		font-size: 45px
+		margin-top: 20px
+
+	.smart
+		margin-top: 130px
+
+	.navBar
+		&:nth-child(2)
+			margin-top: 45px
+
+	.copyright
+		width: 100%
+		
+	.navFother
+		margin-right: 30px
+		margin-top: 5px
+
+@media screen and (max-width: 880px)
+	.smart
+		margin-top: 80px
+
+@media screen and (max-width: 720px)
+	.heroText
+		font-size: 40px
+		margin-top: 135px
+
+	.infoBlock
+		float: none
+		display: inline-block
+		text-align: center
+
+	.centered
+		display: inline-block
+		text-align: center
+		
+	.desctopMenu
+		display: none
+
+	.mobileMenu
+		display: inline-block
+
+	.iphoneSection
+		display: none
+
+	.studyText
+		margin-top: 20px
+		font-size: 1.3em
+
+	.appInform
+		font-size: 3em
+	
+	.aboutText
+		font-size: 15px
+	
+	.quotesText
+		font-size: 15px
+	
+	.user
+		font-size: 15px
+	
+	.learnMore
+		font-size: 15px
+
+	.heroIcons
+		display: inline-block
+		text-align: center
+		width: 400px
+
+	.navFother
+		display: none
+
+	nav
+		position: fixed
+		
+
+@media screen and (max-width: 520px)
+	.heroText
+		font-size: 30px
+
+	.logo
+		display: none
+
+	.heroIcons
+		width: 300px
 

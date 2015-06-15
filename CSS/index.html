@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+    	$(document).ready(function() {
+  		$(".dropdown-button").click(function() {
+    		var $button, $menu;
+    		$button = $(this);
+    		$menu = $button.siblings(".dropdown-menu");
+    		$menu.toggleClass("show-menu");
+    			$menu.children("li").click(function() {
+     			$menu.removeClass("show-menu");
+      			$button.html($(this).html());
+    			});
+  	  		});
+		});
+    </script>
 	<body>
 		<section class="setBackground">
 	 	<div class="setOpacityForBackground">
@@ -12,16 +26,31 @@
 				        <img src="images/logo.png">
 				    </a>
 				</li>
-				<li class="navBar"><a href="#">Media<img src="images/right_icon.png"></a></li>
-				<li class="navBar"><a href="#">News</a></li>
-				<li class="navBar"><a href="#">Clients</a></li>
-				<li class="navBar"><a href="#">Tehnology</a></li>
-				<li class="navBar"><a class="color" href="#">Company</a></li>
+				<li class="navBar desctopMenu"><a href="#">Media<img src="images/right_icon.png"></a></li>
+				<li class="navBar desctopMenu"><a href="#">News</a></li>
+				<li class="navBar desctopMenu"><a href="#">Clients</a></li>
+				<li class="navBar desctopMenu"><a href="#">Tehnology</a></li>
+				<li class="navBar desctopMenu"><a class="color" href="#">Company</a></li>
+				<li class="designDropBox">
+					<div class="dropdown mobileMenu">
+						<div class="dropdown-container">
+							<p class="dropdown-description">Menu</p>
+				    		<p class="dropdown-button"><a class="whiteColor">Click to Select</a></p>
+				    		<ul class="dropdown-menu dropdown-select">
+				    			<li><a class="color" href="#">Company</a></li>
+				    			<li><a class="whiteColor" href="#">Tehnology</a></li>
+				    			<li><a class="whiteColor" href="#">Clients</a></li>
+								<li><a class="whiteColor" href="#">News</a></li>
+					    		<li><a class="whiteColor" href="#">Media<img src="images/right_icon.png"></a></li>
+					   		</ul>
+						</div>
+					</div>
+				</li>
 			</ul>
 		</nav>
 		<div class="toTop">
 			<h2 class="heroText">Make your business better with us</h2>
-				<ul>
+				<ul class="heroIcons">
 					<li class="heroIcon"><a href="#"><img src="images/white_palette.png"></a></li>
 					<li class="heroIcon"><a href="#"><img src="images/gears_white.png"></a></li>
 					<li class="heroIcon"><a href="#"><img src="images/ipad_white.png"></a></li>
@@ -36,6 +65,7 @@
 			<div class="iphoneSection">
 				<img src="images/iphone6.png">
 			</div>
+			<div class="centered">
 			<div class="infoBlock">
 				<h2 class="studyText">Case study</h2>
 				<h1 class="appInform">Application Name</h1>
@@ -53,6 +83,7 @@
 				</div>
 				<p class="learnMore">Learn more</p>
 			</div>
+		</div>
 	</section>
 	<section class="setBackground">
 		<div class="wrapp">
