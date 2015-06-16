@@ -230,6 +230,12 @@ picture {
 body {
   margin: 0; }
 
+.moveToCenter {
+  text-align: center; }
+
+.whiteLogoToCenter {
+  margin-right: 5%; }
+
 .desctopMenu {
   display: block; }
 
@@ -242,12 +248,16 @@ body {
 .whiteColor {
   color: white; }
 
+.fontSize {
+  font-size: 13px;
+  font-weight: 400; }
+
 .designDropBox {
   float: right;
-  margin: 2px;
-  font-size: 17px;
+  margin: 0px;
+  font-size: 16px;
   padding-bottom: 3px;
-  margin-top: 45px;
+  margin-top: 37px;
   text-transform: uppercase;
   font-weight: 600;
   margin-right: 4px;
@@ -452,7 +462,10 @@ nav {
   color: #5293f9;
   font-weight: 700;
   margin-top: 20px;
-  font-size: 13px; }
+  font-size: 13px;
+  cursor: pointer; }
+  .learnMore:hover {
+    color: #f25468; }
 
 .centered {
   display: inline; }
@@ -478,15 +491,15 @@ nav {
   text-align: center; }
 
 .whiteLogo {
-  text-align: center;
-  margin-top: 0px;
-  margin-right: 40px;
-  margin-bottom: 60px; }
+  margin: 0 auto;
+  width: 68px;
+  height: 68px; }
 
 .helpText {
   color: #ffffff;
   text-align: center;
-  font-size: 21px2; }
+  font-size: 21px;
+  margin-top: 60px; }
 
 .contacts {
   color: #ffffff;
@@ -527,31 +540,24 @@ nav {
     text-align: center; }
   .dropdown .dropdown-description {
     background: #316abe;
-    border-bottom-left-radius: 3px;
-    border-bottom: 1px solid silver;
-    border-left: 1px solid silver;
-    border-top-left-radius: 3px;
-    border-top: 1px solid silver;
     color: white;
+    border-right-style: solid;
+    border-right-width: 1px;
     float: left;
-    font-size: 0.7em;
     line-height: 40px;
     margin: 0;
     padding: 0 0.5em 0 1em;
-    font-size: 1em; }
+    font-size: 0.9em;
+    font-weight: 400; }
   .dropdown .dropdown-button {
     background: #316abe;
     color: #166ff1;
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-    border-top: 1px solid silver;
-    border-right: 1px solid silver;
-    border-bottom: 1px solid silver;
     cursor: pointer;
     float: right;
     font-size: 0.7em;
-    font-weight: 800;
+    font-weight: 400;
     line-height: 40px;
+    margin-top: 2px;
     margin: 0;
     padding: 0 2.5em 0 0.5em;
     position: relative; }
@@ -567,7 +573,7 @@ nav {
     display: block;
     position: absolute;
     right: 1em;
-    top: 0; }
+    top: 0px; }
   .dropdown .dropdown-menu {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -585,7 +591,7 @@ nav {
     position: absolute;
     right: 0;
     top: 50px;
-    width: 228px;
+    width: 140px;
     z-index: 99999; }
     .dropdown .dropdown-menu:before {
       position: absolute;
@@ -598,7 +604,7 @@ nav {
       font-size: 1.4em;
       pointer-events: none;
       text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3);
-      top: -0.7em; }
+      top: -1.15em; }
   .dropdown .dropdown-menu li {
     border-bottom: 1px solid silver;
     color: white;
@@ -621,28 +627,6 @@ nav {
     font-size: 50px;
     margin-top: 25px; }
 
-  .studyText {
-    margin-top: 20px;
-    font-size: 1.2em; }
-
-  .appInform {
-    font-size: 2.6em; }
-
-  .aboutText {
-    font-size: 14px; }
-
-  .quotesText {
-    font-size: 14px; }
-
-  .user {
-    font-size: 14px; }
-
-  .learnMore {
-    font-size: 14px; }
-
-  .quotes {
-    display: none; }
-
   .copyright {
     font-size: 14px; }
 
@@ -663,11 +647,21 @@ nav {
     margin-top: 45px; }
 
   .copyright {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .navFother {
+    text-align: center;
     margin-right: 30px;
-    margin-top: 5px; } }
+    margin-top: 5px; }
+
+  .quotesText {
+    width: 70%; }
+
+  .designFother {
+    display: inline-block;
+    height: 60px;
+    width: 480px; } }
 @media screen and (max-width: 880px) {
   .smart {
     margin-top: 80px; } }
@@ -675,15 +669,6 @@ nav {
   .heroText {
     font-size: 40px;
     margin-top: 135px; }
-
-  .infoBlock {
-    float: none;
-    display: inline-block;
-    text-align: center; }
-
-  .centered {
-    display: inline-block;
-    text-align: center; }
 
   .desctopMenu {
     display: none; }
@@ -694,29 +679,17 @@ nav {
   .iphoneSection {
     display: none; }
 
-  .studyText {
-    margin-top: 20px;
-    font-size: 1.3em; }
-
-  .appInform {
-    font-size: 3em; }
-
-  .aboutText {
-    font-size: 15px; }
-
-  .quotesText {
-    font-size: 15px; }
-
-  .user {
-    font-size: 15px; }
-
-  .learnMore {
-    font-size: 15px; }
+  .infoBlock {
+    width: 95%;
+    margin: 0%;
+    margin-right: 5%;
+    margin-left: 5%; }
 
   .heroIcons {
     display: inline-block;
     text-align: center;
-    width: 400px; }
+    width: 400px;
+    margin-left: -10%; }
 
   .navFother {
     display: none; }
@@ -725,12 +698,30 @@ nav {
     position: fixed; } }
 @media screen and (max-width: 520px) {
   .heroText {
-    font-size: 30px; }
+    font-size: 26px; }
 
   .logo {
     display: none; }
 
+  .designDropBox {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 27px; }
+
   .heroIcons {
-    width: 300px; } }
+    width: 300px;
+    margin-left: -20%; }
+
+  .getStartedButton {
+    margin-top: 110px; }
+
+  .appInform {
+    font-size: 40px; }
+
+  .aboutText {
+    width: 95%; }
+
+  .quotes img {
+    margin-bottom: 56px; } }
 
 /*# sourceMappingURL=main.css.map */
