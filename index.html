@@ -1,65 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>
-    	$(document).ready(function() {
-  		$(".dropdown-button").click(function() {
-    		var $button, $menu;
-    		$button = $(this);
-    		$menu = $button.siblings(".dropdown-menu");
-    		$menu.toggleClass("show-menu");
-    			$menu.children("li").click(function() {
-     			$menu.removeClass("show-menu");
-      			$button.html($(this).html());
-    			});
-  	  		});
-		});
-    </script>
 	<body>
+		<title>BOOOOOOOOOOOOOBS</title>
 		<section class="setBackground">
-	 	<div class="setOpacityForBackground">
-		<nav>
-			<ul class="toCenter">
-				<li>
-				    <a href="#" class="logo">
-				        <img src="images/logo.png">
-				    </a>
-				</li>
-				<li class="navBar desctopMenu"><a href="#">Media<img src="images/right_icon.png"></a></li>
-				<li class="navBar desctopMenu"><a href="#">News</a></li>
-				<li class="navBar desctopMenu"><a href="#">Clients</a></li>
-				<li class="navBar desctopMenu"><a href="#">Tehnology</a></li>
-				<li class="navBar desctopMenu"><a class="color" href="#">Company</a></li>
-				<li class="designDropBox">
-					<div class="dropdown mobileMenu">
-						<div class="dropdown-container">
-							<p class="dropdown-description">Menu</p>
-				    		<p class="dropdown-button"><a class="whiteColor">Click to Select</a></p>
-				    		<ul class="dropdown-menu dropdown-select">
-				    			<li><a class="color fontSize" href="#">Company</a></li>
-				    			<li><a class="whiteColor fontSize" href="#">Tehnology</a></li>
-				    			<li><a class="whiteColor fontSize" href="#">Clients</a></li>
-								<li><a class="whiteColor fontSize" href="#">News</a></li>
-					    		<li><a class="whiteColor fontSize" href="#">Media<img src="images/right_icon.png"></a></li>
-					   		</ul>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</nav>
-		<div class="toTop">
-			<h2 class="heroText">Make your business better with us</h2>
-				<ul class="heroIcons">
-					<li class="heroIcon"><a href="#"><img src="images/icon_01.svg"></a></li>
-					<li class="heroIcon"><a href="#"><img src="images/icon_04.svg"></a></li>
-					<li class="heroIcon"><a href="#"><img src="images/icon_02.svg"></a></li>
-					<li class="heroIcon"><a href="#"><img src="images/icon_03.svg"></a></li>
-				</ul>
-			<button class="getStartedButton">Get Started</button>
-		<div class="smart"><img src="images/smart.png"></div>
-		</div>
-		</div>
+		 	<div class="setOpacityForBackground">
+				<nav>
+					<ul class="toCenter">
+						<li>
+						    <a href="#" class="logo">
+						        <img src="images/logo.png">
+						    </a>
+						</li>
+						<li class="navBar desctopMenu"><a href="#">Media<img src="images/right_icon.png"></a></li>
+						<li class="navBar desctopMenu"><a href="#">News</a></li>
+						<li class="navBar desctopMenu"><a href="#">Clients</a></li>
+						<li class="navBar desctopMenu"><a href="#">Tehnology</a></li>
+						<li class="navBar desctopMenu"><a class="color" href="#">Company</a></li>
+						<li class="designDropBox">
+							<div class="dropdown mobileMenu">
+								<div class="dropdown-container">
+									<p class="dropdown-description">Menu</p>
+						    		<p class="dropdown-button"><a class="whiteColor">Click to Select</a></p>
+						    		<ul class="dropdown-menu dropdown-select">
+						    			<li><a class="color fontSize" href="#">Company</a></li>
+						    			<li><a class="whiteColor fontSize" href="#">Tehnology</a></li>
+						    			<li><a class="whiteColor fontSize" href="#">Clients</a></li>
+										<li><a class="whiteColor fontSize" href="#">News</a></li>
+							    		<li><a class="whiteColor fontSize" href="#">Media<img src="images/right_icon.png"></a></li>
+							   		</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<div class="toTop">
+					<h2 class="heroText">Make your business better with us</h2>
+						<ul>
+							<li class="heroIcon"><div class="hvr-grow gavno"></li>
+							<li class="heroIcon"><a class="hvr-grow" href="#"><img src="images/icon_04.svg"></a></li>
+							<li class="heroIcon"><a class="hvr-grow" href="#"><img src="images/icon_02.svg"></a></li>
+							<li class="heroIcon"><a class="hvr-grow" href="#"><img src="images/icon_03.svg"></a></li>
+						</ul>
+					<button class="getStartedButton pulse">Get Started</button>
+				<div class="smart"><img src="images/smart.png"></div>
+				</div>
+			</div>
 		</section>
 		<section class="workSection">
 			<div class="iphoneSection">
@@ -85,7 +70,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="setBackground">
+		<section class="setFotherBackground">
 			<div class="wrapp">
 				<div class="whiteLogoToCenter"><div class="whiteLogo"><a href="#"><img src="images/logo_01.svg"></a></div></div>
 				<div class="helpText"><h4>Have a project we could help you with?</h4></div>
@@ -111,4 +96,10 @@
 			</div>
 		</section>
 	</body>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="javascript/main.js"></script>
+    <link href="css/animate.css" rel="stylesheet" media="all">
+   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </html>
