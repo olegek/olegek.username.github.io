@@ -18,9 +18,15 @@ $(document).ready(function() {
       $(".smart").click(function(){
       $(".workSection").goTo();
   });
-  $(".hvr-grow").on("hover", function(){
-    console.log("1");
-  });
 });
 
+$(document).ready(function(){
+  $('.slideSection').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+  });
+});
 

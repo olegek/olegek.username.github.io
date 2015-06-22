@@ -135,15 +135,15 @@ nav
 
 
 .heroIcon
+	@include span-columns(3)
+	@include omega(4n)
 	display: inline-block
-	padding-left: 6%
-	padding-right: 6%
-	img
-		width: 60px
-		height: 60px
+	padding-left: 5%
+	padding-right: 5%
 	&:hover
 
-.gavno
+
+.palette
 	background-image: url(../images/icon_01.svg)
 	background-size: cover	
 	width: 65px
@@ -154,6 +154,45 @@ nav
 	transition: background-image 2s ease-out
 	&:hover
 		background-image: url(../images/icon_01h.svg)
+
+
+.gears
+	background-image: url(../images/icon_04.svg)
+	background-size: cover	
+	width: 65px
+	height: 60px
+	-webkit-transition: background-image 2s ease-out
+	-moz-transition: background-image 2s ease-out
+	-o-transition: background-image 2s ease-out
+	transition: background-image 2s ease-out
+	&:hover
+		background-image: url(../images/icon_04g.svg)
+
+
+.iPad
+	background-image: url(../images/icon_02.svg)
+	background-size: cover	
+	width: 65px
+	height: 60px
+	-webkit-transition: background-image 2s ease-out
+	-moz-transition: background-image 2s ease-out
+	-o-transition: background-image 2s ease-out
+	transition: background-image 2s ease-out
+	&:hover
+		background-image: url(../images/icon_02h.svg)
+
+.users
+	background-image: url(../images/icon_03.svg)
+	background-size: cover	
+	width: 65px
+	height: 60px
+	-webkit-transition: background-image 2s ease-out
+	-moz-transition: background-image 2s ease-out
+	-o-transition: background-image 2s ease-out
+	transition: background-image 2s ease-out
+	&:hover
+		background-image: url(../images/icon_03h.svg)
+
 
 .heroIcons
 	width: 100%
@@ -408,6 +447,42 @@ nav
 	.show-menu
 		display: block
 
+
+///slick galery
+
+.slick-prev
+	display: none !important
+
+
+.slick-next
+	display: none !important
+
+.slick-dots
+	position: absolute
+	bottom: 380px
+	left: 100px
+	.slick-active
+		button
+			outline: none
+			color: red
+			background-color: red
+			border: solid 2px red
+
+.slideSection
+	button
+		outline: none
+		width: 10px 
+		height: 10px
+		border-radius: 100%
+		margin-top: 0px
+		content: none !important
+		background-color: white
+		border: solid 2px #4390f8
+		font-size: 0.1em
+		font-weight: none
+		line-height: none
+		padding: 0 0 0 0
+		color: white
 //////////// mediaQ
 
 @media screen and (max-width: 1172px)
@@ -425,11 +500,20 @@ nav
 		font-size: 0.875em
 
 
+@media screen and (max-width: 1080px)
+	
+	.heroIcons
+		width: 100%
+
 @media screen and (max-width: 980px)
 
 	.navBar
 		font-size: 0.825em
 
+	
+	.heroIcon
+		padding-left: 4%
+		padding-right: 4%
 
 	.heroText
 		font-size: 2.8125em
@@ -475,8 +559,7 @@ nav
 	.smart
 		margin-top: 80px
 
-
-@media screen and (max-width: 720px)
+@media screen and (max-width: 728px)
 
 	.heroText
 		font-size: 2.5em
