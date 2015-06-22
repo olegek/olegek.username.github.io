@@ -1,37 +1,45 @@
 @import "lib/bourbon/bourbon"
 @import "lib/neat/neat"
 @import "base/base"
-@import "mediaQueries/mediaQ"
+
 
 body
 	margin: 0
 
+
 .moveToCenter
 	text-align: center
 
+
 .whiteLogoToCenter
 	margin-right: 5%
+
 	
 .desctopMenu
 	display: block
 
+
 .mobileMenu
 	display: none
+
 
 .logoDisplay
 	display: none
 
+
 .whiteColor
 	color: white
 
+
 .fontSize
-	font-size: 13px
+	font-size: 0.8em
 	font-weight: 400
+
 
 .designDropBox
 	float: right
 	margin: 0px
-	font-size: 16px
+	font-size: 1em
 	padding-bottom: 3px
 	margin-top: 37px
 	text-transform: uppercase
@@ -39,25 +47,25 @@ body
 	margin-right: 4px
 	margin-left: 4px
 
+
 .setBackground
-	background-image: url(../images/bg3.jpg)
+	background: url(../images/bg1.jpg), rgba(44, 80, 218, 0.25)
 	background-size: cover
 	background-repeat: no-repeat
-	height: 101vh
+	height: 100%
 	@include clearfix
-
+	
 
 .setOpacityForBackground
-	height: 100vh 	 
 	background-color: rgba(44, 80, 218, 0.25)
-
+	background-size: cover
+	height: 100%
 
 
 .setFotherBackground
 	background-image: url(../images/bg3.jpg)
 	background-size: cover
 	background-repeat: no-repeat
-	height: 100vh
 	@include clearfix
 
 
@@ -68,6 +76,7 @@ nav
 	z-index: 99
 	-webkit-backface-visibility: hidden
 	height: 95px
+
 
 .toCenter
 	float: right
@@ -84,12 +93,13 @@ nav
 	box-sizing: initial
 	float: left
 
+
 .navBar
 	float: right
 	color: #2980f7
 	margin: 7px
 	padding: 3px
-	font-size: 17px
+	font-size: 1.06em
 	padding-bottom: 3px
 	margin-top: 55px
 	text-transform: uppercase
@@ -97,51 +107,68 @@ nav
 	margin-right: 4px
 	margin-left: 4px
 
+
 .navBar
 	&:nth-child(2)
 		margin-top: 50px
  
+
 .color
 	color: #f25468
+
 
 .toTop
 	@include outer-container
 	@include span-columns(6)
 	@include shift(3)
-	margin-top: 40px
-	max-width: 64em
-	text-align: center
-	margin-bottom: 3em
+	margin-top: 5%
+	max-width: 100%
+	margin-bottom: 1em
 	text-align: center
 	margin-left: 25%
+
 
 .heroText
 	font-weight: bolder
 	color: white
-	font-size: 60px
+	font-size: 4em
+
 
 .heroIcon
-	@include span-columns(3)
-	@include omega(4n)
-	margin-right: 0px
-	margin-top: 3%
-
-.heroIcon
+	display: inline-block
+	padding-left: 6%
+	padding-right: 6%
 	img
-		width: 48px
-		height: 51px
+		width: 60px
+		height: 60px
+	&:hover
+
+.gavno
+	background-image: url(../images/icon_01.svg)
+	background-size: cover	
+	width: 65px
+	height: 60px
+	-webkit-transition: background-image 2s ease-out
+	-moz-transition: background-image 2s ease-out
+	-o-transition: background-image 2s ease-out
+	transition: background-image 2s ease-out
+	&:hover
+		background-image: url(../images/icon_01h.svg)
 
 .heroIcons
 	width: 100%
+
 
 .getStartedButton
 	padding: 1em 4em
 	margin-top: 55px
 	margin-right: 30px
 
+
 .smart
 	margin-top: 90px
 	margin-right: 10px
+
 
 .workSection
 	@include outer-container
@@ -151,11 +178,14 @@ nav
 		float: right
 		margin-right: 19%
 
+
 .iphoneSection
 	@include span-columns(6)
 
+
 .infoBlock
 	@include span-columns(6)
+
 
 .studyText
 	color: #7b7b7b
@@ -164,19 +194,23 @@ nav
 	margin-top: 40px
 	margin-bottom: 10px
 
+
 .appInform
 	color: #333333
 	font-size: 3em
 	font-weight: 800
 	margin-bottom: 25px
 
+
 .aboutText
 	color: #7b7b7b
-	font-size: 16px
+	font-size: 1em
 	font-weight: inherit
+
 
 .topToText
 	margin-top: 35px
+
 
 .quotes
 	display: inline-block
@@ -185,11 +219,13 @@ nav
 		margin-bottom: 29px
 		width: 65%
 
+
 .quotesText
 	display: inline-block
 	width: 90%
 	color: #7b7b7b
 	font-weight: normal
+
 
 .user
 	margin-top: 15px
@@ -200,21 +236,25 @@ nav
 		color: #7b7b7b
 		font-weight: normal
 
+
 .learnMore
 	color: #5293f9
 	font-weight: 700
 	margin-top: 20px
-	font-size: 13px
+	font-size: 0.8em
 	cursor: pointer
 	&:hover
 		color: #f25468
 
+
 .centered
 	display: inline
+
 
 .wrapp
 	@include outer-container
 	@include span-columns(10)
+	max-width: 100%
 	margin-left: 10%
 	margin-top: 5%
 
@@ -222,25 +262,30 @@ nav
 .newGetStartedPosition
 	text-align: center
 
+
 .whiteLogo
 	display:inline-block
+	margin-top: 15%
 	margin: 0 auto
 	width: 68px
 	height: 68px
 
+
 .helpText
 	color: #ffffff
 	text-align: center
-	font-size: 21px
+	font-size: 1.3em
 	margin-top: 60px
+
 
 .contacts
 	color: #ffffff
 	text-align: center
 	line-height: 10px
 	margin-top: 120px
-	font-size: 12px
+	font-size: 0.75em
 	margin-bottom: 40px
+
 
 .copyright
 	@include span-columns(6)
@@ -250,10 +295,11 @@ nav
 	list-style-image: none	
 	width: 50%
 
+
 .navFother
 	float: right
 	color: #2980f7
-	font-size: 17px
+	font-size: 1.06em
 	text-transform: uppercase
 	font-weight: 600
 	margin-right: 4px
@@ -362,45 +408,57 @@ nav
 	.show-menu
 		display: block
 
-//////////// close
+//////////// mediaQ
 
 @media screen and (max-width: 1172px)
+
 	.heroText
-		font-size: 50px
+		font-size: 3.125em
 		margin-top: 25px
 
+
 	.copyright
-		font-size: 14px
+		font-size: 0.875em
+
+
 	.navFother
-		font-size: 14px
+		font-size: 0.875em
 
 
 @media screen and (max-width: 980px)
+
 	.navBar
-		font-size: 13px
+		font-size: 0.825em
+
 
 	.heroText
-		font-size: 45px
+		font-size: 2.8125em
 		margin-top: 20px
+
 
 	.smart
 		margin-top: 130px
+
 
 	.navBar
 		&:nth-child(2)
 			margin-top: 45px
 
+
 	.copyright
 		width: 100%
 		text-align: center
 		
+
 	.navFother
 		text-align: center
 		margin-right: 30px
 		margin-top: 5px
 
+
 	.quotesText
 		width: 70%
+
 
 	.designFother
 		display: inline-block
@@ -408,23 +466,34 @@ nav
 		width: 480px
 
 
+	.wrapp
+		margin-top: 15%
+
+
 @media screen and (max-width: 880px)
+
 	.smart
 		margin-top: 80px
 
+
 @media screen and (max-width: 720px)
+
 	.heroText
-		font-size: 40px
+		font-size: 2.5em
 		margin-top: 135px
 		
+
 	.desctopMenu
 		display: none
+
 
 	.mobileMenu
 		display: inline-block
 
+
 	.iphoneSection
 		display: none
+
 
 	.infoBlock
 		width: 95%
@@ -432,47 +501,59 @@ nav
 		margin-right: 5%
 		margin-left: 5%
 
+
 	.heroIcons
 		display: inline-block
 		text-align: center
 		width: 400px
 		margin-left: -10%
 
+
 	.navFother
 		display: none
+
 
 	nav
 		position: fixed
 		
 
 @media screen and (max-width: 520px)
+
 	.heroText
-		font-size: 26px
+		font-size: 1.625em
+
 
 	.logo
 		display: none
+
 
 	.designDropBox
 		display: inline-block
 		margin: 0 auto
 		margin-top: 27px
 
+
 	.heroIcons
 		width: 300px
 		margin-left: -20%
 
+
 	.getStartedButton
-		margin-top: 110px
+		margin-top: 70px
+
 
 	.appInform
 		font-size: 40px
 
-	.studyText
 
 	.aboutText
-		width: 95%
+		width: 95%	
+
+
+	.contacts
+		margin-top: 80px
+
 
 	.quotes
 		img
 			margin-bottom: 56px
-	
